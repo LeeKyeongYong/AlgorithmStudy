@@ -21,8 +21,6 @@ public class Sample002 {
 		System.out.println("result: "+s.solution(2, 3));
 		System.out.println("result: "+s.solution(11,11));
 		System.out.println("result: "+s.solution(7,99));
-		
-		
 	}
 }
 
