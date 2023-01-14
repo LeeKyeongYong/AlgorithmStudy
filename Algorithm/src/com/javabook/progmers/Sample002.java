@@ -14,7 +14,7 @@ class Solution2 {
         return answer;
     }
 }
-public class Samle002 {
+public class Sample002 {
 	public static void main(String[] args) {
 		
 		Solution2 s=new Solution2();
