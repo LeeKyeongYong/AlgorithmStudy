@@ -1,4 +1,4 @@
-package com.javabook.progmers;
+package com.javabook.progmers0;
 
 public class Sample008 {
 	public static void main(String[] args) {

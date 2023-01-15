@@ -1,4 +1,4 @@
-package com.javabook.progmers;
+package com.javabook.progmers0;
 
 class Solution2 {
     public int solution(int num1, int num2) {
