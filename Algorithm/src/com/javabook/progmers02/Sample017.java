@@ -27,6 +27,9 @@ class Solution17 {
         } else {
             answer=0;
         }
+        
+        //answer=beChange.equals(afChange) ? 1 : 0; //자매품.. 삼항연산자도 있어요~ ㅎㅎㅎ ㅋ
+        
         return answer;
     }
     public void ArraySort(char[] sort){
