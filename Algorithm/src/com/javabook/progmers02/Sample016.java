@@ -3,13 +3,13 @@ package com.javabook.progmers02;
 public class Sample016 {//최대값 만들기
 	public static void main(String[] args) {
 		int[] numbers= {0, -31, 24, 10, 1, 9};
-		Solution17 s=new Solution17();
+		Solution16 s=new Solution16();
 		int solution = s.solution(numbers);
 		System.out.println("최대값 만들기 result: "+solution);
 	}
 }
 
-class Solution17 {
+class Solution16 {
     public int solution(int[] numbers) {
         int answer = 0;
         
