@@ -33,7 +33,7 @@ public class Sample001 { //Q6159_코스튬파티
 			}
 	        
 	        //정렬하기
-	        for(int i=0;i<cows.length-1;i++){
+	        for(int i=0;i<cows.length;i++){
 	           for(int j=0; j<cows.length-1-i;j++){
 	                if(cows[j]>cows[j+1]){                   
 	                    int tmp = cows[j];
@@ -42,20 +42,23 @@ public class Sample001 { //Q6159_코스튬파티
 	                }              
 	            }
 	        }
-	        
+
+       
 	        //효율적인 코드를 위해 투 포인터
 	        //배열을 탐색하면서 합이 s보다 작은것 갯수 찾기
 	          for(int start = 0;start<N-1;start++) {
 		        	end = start+1;
+		         	
 		        	if(cows[start]>=S)//s보다 크면 빠져나오고
 		        		break;
+		        	
 		        	while(end <N && cows[start]+cows[end]<=S) {
 		        	//S보다 작면 증가시킨다.
 		        		cnt++;
 		        		end++;
 		        	}
 		        } 
-	          System.out.println(cnt);
+	          	System.out.println(cnt);
 	       
 		     } catch (Exception e) {
 				// TODO Auto-generated catch block
