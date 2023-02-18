@@ -8,6 +8,19 @@ import java.util.StringTokenizer;
 
 public class Sample001 { //Q6159_코스튬파티
 	public static void main(String[] args) {
+		/* 입력할경우
+		 4 6
+		 3
+		 5
+		 2
+		 1 
+		 */
+		
+		/* 출력할경우
+		 4
+		 */
+
+		
 		 try {
 			 InputStreamReader ir = new InputStreamReader(System.in);
 			 BufferedReader br = new BufferedReader(ir);
