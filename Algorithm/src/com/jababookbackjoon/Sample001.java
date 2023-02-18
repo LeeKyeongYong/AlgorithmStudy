@@ -55,7 +55,7 @@ public class Sample001 { //Q6159_ÄÚ½ºÆ¬ÆÄÆ¼
 		        		end++;
 		        	}
 		        } 
-	          System.out.println(end);
+	          System.out.println(cnt);
 	       
 		     } catch (Exception e) {
 				// TODO Auto-generated catch block
