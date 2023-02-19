@@ -36,7 +36,10 @@ class Solution46 {
     			 }
     		 }
     	 }
+    	 boolean flug=false;
     	 
+    	 
+    	 //출구찾기
     	 
     	return answer;
     }
