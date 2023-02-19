@@ -35,6 +35,8 @@ public class Sample006 {//Q21921_블로그
 		st=new StringTokenizer(br.readLine());
 		int[] arr=new int[n];
 		int sum=0;
+		int ans=0;
+		int ans_cnt=1;
 		
 		for(int i=0; i<n; i++) {
 			arr[i]=Integer.parseInt(st.nextToken());
@@ -44,8 +46,7 @@ public class Sample006 {//Q21921_블로그
 			sum+=arr[i];
 		}
 		
-		int ans=sum;
-		int ans_cnt=1;
+		ans=sum;
 		
 		for(int i=x; i<n; i++) {
 			sum+=arr[i];
