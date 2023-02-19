@@ -14,11 +14,11 @@ class Solution40 {
     public int solution(int a, int b) {
         int answer = 0;
         
-        for(;b%2==0;) {
+        while(b%2==0) {
         	b=b/2;
         }
         
-        for(;b%5==0;) {
+        while(b%5==0) {
         	b=b/5;
         }
         
