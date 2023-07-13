@@ -1,4 +1,4 @@
-package com.jababookback1;
+package com.jababookbackjoon1;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
