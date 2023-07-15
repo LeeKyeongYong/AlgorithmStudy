@@ -1,20 +1,20 @@
 package com.javabook.progmers02;
 
-public class Sample034 {//ÀÌÁø¼ö ´õÇÏ±â
-	public static void main(String[] args) {
-		String bin1="10";
-		String bin2="11";
-		Solution34 s=new Solution34();
-		String result=s.solution(bin1, bin2);
-		System.out.println("ÀÌÁø¼ö ´õÇÏ±â °á°ú°ª: "+result);
-	}
+public class Sample034 {//ì´ì§„ìˆ˜ ë§ì…ˆ
+    public static void main(String[] args) {
+        String bin1 = "10";
+        String bin2 = "11";
+        Solution34 s = new Solution34();
+        String result = s.solution(bin1, bin2);
+        System.out.println("ì´ì§„ìˆ˜ ë§ì…ˆ ê²°ê³¼: " + result);
+    }
 }
-class Solution34 {//2Áø¼ö ´õÇÏ±â
+class Solution34 {//2ì§„ìˆ˜ ë§ì…ˆ
     public String solution(String bin1, String bin2) {
         String answer = "";
-        int numBin1=Integer.parseInt(bin1,2);
-        int numBin2=Integer.parseInt(bin2,2);
-        answer=Integer.toBinaryString(numBin1+numBin2);
+        int numBin1 = Integer.parseInt(bin1, 2);
+        int numBin2 = Integer.parseInt(bin2, 2);
+        answer = Integer.toBinaryString(numBin1 + numBin2);
         return answer;
     }
 }

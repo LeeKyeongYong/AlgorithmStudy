@@ -1,32 +1,32 @@
 package com.javabook.progmers02;
 
-public class Sample037 {//»ï°¢ÇüÀÇ ¿Ï¼ºÁ¶°Ç
-	public static void main(String[] args) {
-		int[] sides= {11,7};
-		Solution37 s=new Solution37();
-		int result=s.solution(sides);
-		System.out.println("»ï°¢ÇüÀÇ ¿Ï¼ºÁ¶°Ç: "+result);
-	}
+public class Sample037 {//ì¢…ì´ ì¡°ê° ê°œìˆ˜
+    public static void main(String[] args) {
+        int[] sides = {11, 7};
+        Solution37 s = new Solution37();
+        int result = s.solution(sides);
+        System.out.println("ì¢…ì´ ì¡°ê° ê°œìˆ˜: " + result);
+    }
 }
 class Solution37 {
     public int solution(int[] sides) {
         int answer = 0;
         int max = Math.max(sides[0], sides[1]);
         int min = Math.min(sides[0], sides[1]);
-        int lowSize=0;
-        int heightSize=0;
-        for(int i=0; i<sides.length; i++) {
-        	if(sides[i]>max) {
-        		max=sides[i];
-        	}
-        	if(sides[i]<min) {
-        		min=sides[i];
-        	}
+        int lowSize = 0;
+        int heightSize = 0;
+        for(int i = 0; i < sides.length; i++) {
+            if(sides[i] > max) {
+                max = sides[i];
+            }
+            if(sides[i] < min) {
+                min = sides[i];
+            }
         }
         
-        lowSize=max-min;
-        heightSize=max+min;
-        answer=heightSize-lowSize-1;
+        lowSize = max - min;
+        heightSize = max + min;
+        answer = heightSize - lowSize - 1;
         return answer;
     }
 }

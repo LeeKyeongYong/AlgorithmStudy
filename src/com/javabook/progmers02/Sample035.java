@@ -1,44 +1,42 @@
 package com.javabook.progmers02;
 
-public class Sample035 { //´ÙÇ×½Ä ´õÇÏ±â
-	public static void main(String[] args) {
-		//String polynomial="3x + 7 + x";
-		String polynomial="x + x + x";
-		Solution35 s=new Solution35();
-		String result=s.solution(polynomial);
-		System.out.println("´ÙÇ×½Ä ´õÇÏ±â: "+result);
-	}
+public class Sample035 { //ë‹¤í•­ì‹ ì²˜ë¦¬
+    public static void main(String[] args) {
+        //String polynomial = "3x + 7 + x";
+        String polynomial = "x + x + x";
+        Solution35 s = new Solution35();
+        String result = s.solution(polynomial);
+        System.out.println("ë‹¤í•­ì‹ ì²˜ë¦¬: " + result);
+    }
 }
 class Solution35 {
     public String solution(String polynomial) {
         String answer = "";
-        int coefficient=0; //°è¼ö
-        int constantnumber=0; //»ó¼ö
+        int coefficient = 0; // ê³„ìˆ˜
+        int constantNumber = 0; // ìƒìˆ˜
         
-        String coefficientStr="";//°è¼ö¹®ÀÚ¿­
-        String constantStr="";//»ó¼ö¹®ÀÚ¿­
+        String coefficientStr = ""; // ê³„ìˆ˜ ë¬¸ìì—´
+        String constantStr = ""; // ìƒìˆ˜ ë¬¸ìì—´
         
-       
-        for(String s:polynomial.split(" ")) {
-        	if(s.contains("x")) {
-        		coefficient+=s.equals("x")? 1 : 
-        			Integer.parseInt(s.substring(0,s.length()-1));
-        	} else if(!s.contains("+")) {
-        		constantnumber+=Integer.parseInt(s);
-        	}
+        for (String s : polynomial.split(" ")) {
+            if (s.contains("x")) {
+                coefficient += s.equals("x") ? 1 : Integer.parseInt(s.substring(0, s.length()-1));
+            } else if (!s.contains("+")) {
+                constantNumber += Integer.parseInt(s);
+            }
         }
         
-        coefficientStr=coefficient > 0 ? coefficient == 1 ? "x" : coefficient+"x":"";
-        constantStr=constantnumber > 0 ? String.valueOf(constantnumber):"";
+        coefficientStr = coefficient > 0 ? coefficient == 1 ? "x" : coefficient + "x" : "";
+        constantStr = constantNumber > 0 ? String.valueOf(constantNumber) : "";
         
-        if(coefficient>0) {
-        	if(constantnumber>0) {
-        		answer+=coefficientStr+" + "+constantStr;
-        	} else {
-        		answer+=coefficientStr;
-        	}
-        } else if(constantnumber > 0) {
-        	answer+=constantStr;
+        if (coefficient > 0) {
+            if (constantNumber > 0) {
+                answer += coefficientStr + " + " + constantStr;
+            } else {
+                answer += coefficientStr;
+            }
+        } else if (constantNumber > 0) {
+            answer += constantStr;
         }
         
         return answer;
