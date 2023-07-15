@@ -1,34 +1,35 @@
 package com.javabook.progmers02;
 
-public class Sample029 { //Àß¶ó¼­ ¹è¿­·Î ÀúÀåÇÏ±â
+public class Sample029 { // ë¬¸ìì—´ ë°°ì—´ë¡œ ë³€í™˜í•˜ê¸°
 	public static void main(String[] args) {
-		String my_str="abc1Addfggg4556b";
-		int n=6;
-		Solution29 s=new Solution29();
-		String[] result=s.solution(my_str, n);
-		System.out.print("Àß¶ó¼­ ¹è¿­·Î ÀúÀåÇÏ±â °á°ú: ");
-		for(int i=0; i<result.length; i++) {
-			System.out.print(result[i]+" ");
+		String my_str = "abc1Addfggg4556b";
+		int n = 6;
+		Solution29 s = new Solution29();
+		String[] result = s.solution(my_str, n);
+		System.out.print("ë¬¸ìì—´ ë°°ì—´ë¡œ ë³€í™˜ ê²°ê³¼: ");
+		for (int i = 0; i < result.length; i++) {
+			System.out.print(result[i] + " ");
 		}
 	}
 }
+
 class Solution29 {
-    public String[] solution(String my_str, int n) {
-        String[] answer = {};
-        
-        int cnt=(my_str.length()+n-1)/n;
-        answer=new String[cnt];
-        
-        for(int i=0; i<cnt; i++) {
-        	int start = n*i;
-        	int end=0;
-        	if(start+n>=my_str.length()) {
-        		end=my_str.length();
-        	} else {
-        		end=start+n;
-        	}
-        	answer[i]=my_str.substring(start,end);
-        }
-        return answer;
-    }
+	public String[] solution(String my_str, int n) {
+		String[] answer = {};
+
+		int cnt = (my_str.length() + n - 1) / n;
+		answer = new String[cnt];
+
+		for (int i = 0; i < cnt; i++) {
+			int start = n * i;
+			int end = 0;
+			if (start + n >= my_str.length()) {
+				end = my_str.length();
+			} else {
+				end = start + n;
+			}
+			answer[i] = my_str.substring(start, end);
+		}
+		return answer;
+	}
 }

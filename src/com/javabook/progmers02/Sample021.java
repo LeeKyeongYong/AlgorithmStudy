@@ -1,31 +1,31 @@
 package com.javabook.progmers02;
 
-public class Sample021 {//ÇÑ ¹ø¸¸ µîÀåÇÑ ¹®ÀÚ
+public class Sample021 { // í…ŒìŠ¤íŠ¸ ì½”ë“œ ì‘ì„±
 	public static void main(String[] args) {
-		Solution021 s=new Solution021();
-		String result=s.solution("abcbcdc");
-		System.out.println("ÇÑ ¹ø¸¸ µîÀåÇÑ ¹®ÀÚ: "+result);
+		Solution021 s = new Solution021();
+		String result = s.solution("abcbcdc");
+		System.out.println("ê²°ê³¼ ë¬¸ìì—´: " + result);
 	}
 }
 
 class Solution021 {
-    public String solution(String s) {
-        String answer = "";
-        int[] strArr=new int[26];
-        for(int i=0; i<strArr.length; i++) { //0À¸·Î Ã¤¿öÁØ´Ù.
-        	strArr[i]=0;
-        }
-        
-        for(int i=0; i<s.length(); i++) {//¹İº¹ÀÌ µÇÁö ¾ÊÀº ±ÛÀÚ¸¦ ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
-        	strArr[s.charAt(i)-97]+=1;
-        }
-        
-        for(int i=0; i<26; i++) {
-        	if(strArr[i]==1) { //ÇÑ¹ø¸¸ µîÀåÇÑ ¹®ÀÚ¸¦ Ä«¿îÆÃÇØ¼­ Á¶°ÇÀÌ ¼º¸³ÇÏ¸é ¹İÈ¯
-        		answer+=(char)(i+97);
-        	}
-        }
-        
-        return answer;
-    }
+	public String solution(String s) {
+		String answer = "";
+		int[] strArr = new int[26];
+		for (int i = 0; i < strArr.length; i++) { // ë°°ì—´ì„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+			strArr[i] = 0;
+		}
+
+		for (int i = 0; i < s.length(); i++) { // ë°˜ë³µë¬¸ì„ ì‚¬ìš©í•˜ì—¬ ë¬¸ìì˜ ë“±ì¥ íšŸìˆ˜ë¥¼ ë°°ì—´ì— ì €ì¥
+			strArr[s.charAt(i) - 97] += 1;
+		}
+
+		for (int i = 0; i < 26; i++) {
+			if (strArr[i] == 1) { // ë“±ì¥ íšŸìˆ˜ê°€ 1ì¸ ë¬¸ìë§Œ ì„ íƒí•˜ì—¬ ê²°ê³¼ì— ì¶”ê°€
+				answer += (char) (i + 97);
+			}
+		}
+
+		return answer;
+	}
 }

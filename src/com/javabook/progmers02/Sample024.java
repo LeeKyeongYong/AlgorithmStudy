@@ -1,31 +1,32 @@
 package com.javabook.progmers02;
 
-public class Sample024 { //¿¬¼ÓµÈ ¼öÀÇ ÇÕ
+public class Sample024 { // ë“±ì°¨ìˆ˜ì—´ í•©
 	public static void main(String[] args) {
-		int num=3;
-		int total=12;
-		Solution24 s=new Solution24();
-		int[] result=s.solution(num, total);
-		System.out.print("¿¬¼ÓµÈ¼öÀÇ ÇÕ: ");
-		for(int i=0; i<result.length; i++) {
-			if(i == result.length-1) {
+		int num = 3;
+		int total = 12;
+		Solution24 s = new Solution24();
+		int[] result = s.solution(num, total);
+		System.out.print("ë“±ì°¨ìˆ˜ì—´ì˜ í•©: ");
+		for (int i = 0; i < result.length; i++) {
+			if (i == result.length - 1) {
 				System.out.print(result[i]);
 			} else {
-				System.out.print(result[i]+" , ");
+				System.out.print(result[i] + " , ");
 			}
 		}
 	}
 }
+
 class Solution24 {
-    public int[] solution(int num, int total) {
-        int[] answer = {};
-        answer=new int[num];
-        
-        int nSum=num*(1+num)/2;
-        int start=(total-nSum)/num;
-        for(int i=1; i<num+1; i++) {
-        	answer[i-1]=i+start;
-        }
-        return answer;
-    }
+	public int[] solution(int num, int total) {
+		int[] answer = {};
+		answer = new int[num];
+
+		int nSum = num * (1 + num) / 2;
+		int start = (total - nSum) / num;
+		for (int i = 1; i < num + 1; i++) {
+			answer[i - 1] = i + start;
+		}
+		return answer;
+	}
 }
