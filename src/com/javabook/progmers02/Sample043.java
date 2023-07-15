@@ -1,48 +1,48 @@
 package com.javabook.progmers02;
 
 import java.util.*;
-public class Sample043 {//Æ¯ÀÌÇÑ Á¤·Ä
+public class Sample043 {//íŠ¹ì • ìˆ«ì ë”í•˜ê¸°
 	public static void main(String[] args) {
 		int[] numlist= {1,2,3,4,5,6}; 
 		int n=4;
 		Solution43 s=new Solution43();
 		int[] result=s.solution(numlist,n);
 		for(int i=0; i<result.length; i++) {
-			System.out.println("Æ¯ÀÌÇÑÁ¤·Ä: "+result[i]);
+			System.out.println("íŠ¹ì • ìˆ«ì ê²°ê³¼: "+result[i]);
 		}
 	}
 }
 class Solution43 {
     public int[] solution(int[] numlist, int n) {
         int[] answer = {};
-        answer= new int[numlist.length];
-        double[] order=new double[numlist.length];
+        answer = new int[numlist.length];
+        double[] order = new double[numlist.length];
         
         for(int i=0; i<numlist.length; i++) {
-        	if(numlist[i]-n<0) {
-        	order[i]=((int)Math.abs(numlist[i]-n))+0.5;
-        	} else {
-        		order[i]=numlist[i]-n;
-        	}
+            if(numlist[i]-n<0) {
+                order[i] = ((int)Math.abs(numlist[i]-n))+0.5;
+            } else {
+                order[i] = numlist[i]-n;
+            }
         }
         
-        //¿À¸§Â÷¼ø Á¤·Ä
-        for(int i=0;i<order.length;i++){
-	           for(int j=0; j<order.length-1-i;j++){
-	                if(order[j]>order[j+1]){                   
-	                    double tmp = order[j];
-	                    order[j] = order[j+1];
-	                    order[j+1] = tmp;                  
-	                }              
-	            }
-	        }
+        // ì •ë ¬
+        for(int i=0; i<order.length; i++) {
+            for(int j=0; j<order.length-1-i; j++) {
+                if(order[j]>order[j+1]) {                   
+                    double tmp = order[j];
+                    order[j] = order[j+1];
+                    order[j+1] = tmp;                  
+                }              
+            }
+        }
         
         for(int i=0; i<numlist.length; i++) {
-        	if(order[i]%1!=0) {
-        		answer[i]=n-(int)order[i];
-        	} else {
-        		answer[i]=(int)order[i]+n;
-        	}
+            if(order[i]%1!=0) {
+                answer[i] = n-(int)order[i];
+            } else {
+                answer[i] = (int)order[i]+n;
+            }
         }
         
         return answer;

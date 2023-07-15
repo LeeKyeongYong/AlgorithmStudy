@@ -1,30 +1,30 @@
 package com.javabook.progmers02;
 
 import java.util.*;
-public class Sample041 {//ÀÔ¹® ·Î±×ÀÎ ¼º°ø?
-	public static void main(String[] args) {
-		String[] id_pw= {"meosseugi", "1234"};
-		String[][] db= {{"rardss", "123"},{"yyoom", "1234"},{"meosseugi", "1234"}};
-		Solution41 s=new Solution41();
-		String result=s.solution(id_pw, db);
-		System.out.println("ÀÔ¹® ·Î±×ÀÎ ¼º°ø?: "+result);
-	}
+public class Sample041 {//íšŒì› ë¡œê·¸ì¸ í™•ì¸
+    public static void main(String[] args) {
+        String[] id_pw = {"ë¯¸ìš°ì“°ê¸°", "1234"};
+        String[][] db = {{"ë¼ë””ìŠ¤", "123"}, {"ìœ ì›€", "1234"}, {"ë¯¸ìš°ì“°ê¸°", "1234"}};
+        Solution41 s = new Solution41();
+        String result = s.solution(id_pw, db);
+        System.out.println("íšŒì› ë¡œê·¸ì¸ í™•ì¸: " + result);
+    }
 }
 class Solution41 {
     public String solution(String[] id_pw, String[][] db) {
         String answer = "";
-        Map<String,String> dbMap=new HashMap<String, String>();
-        for(String[] strings:db) {
-        	dbMap.put(strings[0],strings[1]);
+        Map<String, String> dbMap = new HashMap<String, String>();
+        for (String[] strings : db) {
+            dbMap.put(strings[0], strings[1]);
         }
-        if(dbMap.containsKey(id_pw[0])) {
-        	if(dbMap.get(id_pw[0]).equals(id_pw[1])) {
-        		answer="login";
-        	} else {
-        		answer="wrong pw";
+        if (dbMap.containsKey(id_pw[0])) {
+            if (dbMap.get(id_pw[0]).equals(id_pw[1])) {
+                answer = "login";
+            } else {
+                answer = "wrong pw";
             }
         } else {
-        	answer="fail";
+            answer = "fail";
         }
         return answer;
     }

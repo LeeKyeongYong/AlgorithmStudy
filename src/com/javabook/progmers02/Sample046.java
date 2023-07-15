@@ -1,11 +1,11 @@
 package com.javabook.progmers02;
 import java.util.*;
-public class Sample046 { //�̷�Ż��
+public class Sample046 { //미로탈출
 	public static void main(String[] args) {
 		String[] maps= {"SOOOL","XXXXO","OOOOO","OXXXX","OOOOE"};
 		Solution46 s= new Solution46();
 		int result=s.solution(maps);
-		System.out.println("�̷�Ż�� ���: "+result);
+		System.out.println("미로탈출 횟수: "+result);
 	}
 }
 class Solution46 {
@@ -39,7 +39,7 @@ class Solution46 {
     	 boolean flug=false;
     	 
     	 
-    	 //�ⱸã��
+    	 //미로 탈출 알고리즘 구현 부분입니다.
     	 
     	return answer;
     }

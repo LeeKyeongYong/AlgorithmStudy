@@ -1,33 +1,33 @@
 package com.javabook.progmers02;
 
-public class Sample040 {// À¯ÇÑ¼Ò¼ö ÆÇº°ÇÏ±â
-	public static void main(String[] args) {
-		int a=12;
-		int b=21;
-		Solution40 s=new Solution40();
-		int result=s.solution(a, b);
-		System.out.println("À¯ÇÑ¼Ò¼ö ÆÇº°ÇÏ±â: "+result);
-	}
+public class Sample040 {// ê³±ì…ˆê³¼ ë‚˜ëˆ—ì…ˆ
+    public static void main(String[] args) {
+        int a = 12;
+        int b = 21;
+        Solution40 s = new Solution40();
+        int result = s.solution(a, b);
+        System.out.println("ê³±ì…ˆê³¼ ë‚˜ëˆ—ì…ˆ ê²°ê³¼: " + result);
+    }
 }
 
 class Solution40 {
     public int solution(int a, int b) {
         int answer = 0;
-        
-        while(b%2==0) {
-        	b=b/2;
+
+        while (b % 2 == 0) {
+            b = b / 2;
         }
-        
-        while(b%5==0) {
-        	b=b/5;
+
+        while (b % 5 == 0) {
+            b = b / 5;
         }
-        
-        if((a/(double)b)%1==0) {
-        	answer=1;
+
+        if ((a / (double) b) % 1 == 0) {
+            answer = 1;
         } else {
-        	answer=2;
+            answer = 2;
         }
-        
+
         return answer;
     }
 }
