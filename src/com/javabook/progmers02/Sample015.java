@@ -1,34 +1,35 @@
 package com.javabook.progmers02;
 
-public class Sample015 {//¾à¼ö±¸ÇÏ±â
-	public static void main(String[] args) {
-		int n=24;
-		Solution15 s=new Solution15();
-		int[] solution=s.solution(n);
-		for(int i=0; i<solution.length; i++) {
-			System.out.print(solution[i]+" ");
-		}
-	}
+public class Sample015 { // ì•½ìˆ˜êµ¬í•˜ê¸°
+    public static void main(String[] args) {
+        int n = 24;
+        Solution15 s = new Solution15();
+        int[] solution = s.solution(n);
+        for (int i = 0; i < solution.length; i++) {
+            System.out.print(solution[i] + " ");
+        }
+    }
 }
+
 class Solution15 {
     public int[] solution(int n) {
         int[] answer = {};
-        int count=0;
-        int[] array= new int[n];
-        
-        for(int i=1; i<=n; i++) {
-        	if(n%i==0) { //¾à¼öÀÎ¸¸Å­ Ä«¿îÆ® Ã³¸®
-        		array[count]=i;
-        		count++;
-        	}
+        int count = 0;
+        int[] array = new int[n];
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) { // ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ëŠ” ìˆ˜ ì°¾ê¸°
+                array[count] = i;
+                count++;
+            }
         }
-        answer = new int[count]; //´ä¾ÈÀ» ÀÛ¼ºÇÏ±âÀ§ÇØ ¹è¿­ »ý¼º ½ÃÀÛÇÑ´Ù.
-        for(int i=0; i<count; i++) {
-        	if(array[i]!=0) { //¾à¼öÀÎ¸¸Å­ Ä«¿îÆ® Ã³¸®
-        		answer[i]=array[i];
-        	}
+        answer = new int[count]; // ì•½ìˆ˜ë“¤ì„ ì €ìž¥í•  ë°°ì—´ì„ ìƒì„±í•©ë‹ˆë‹¤.
+        for (int i = 0; i < count; i++) {
+            if (array[i] != 0) { // ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ëŠ” ìˆ˜ ì°¾ê¸°
+                answer[i] = array[i];
+            }
         }
-        
+
         return answer;
     }
 }

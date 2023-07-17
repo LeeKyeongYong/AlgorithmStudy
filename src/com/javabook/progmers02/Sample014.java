@@ -1,27 +1,28 @@
 package com.javabook.progmers02;
 
-public class Sample014 { //ÀÎµ¦½º ¹Ù²Ù±â
-	public static void main(String[] args) {
-		String my_String="hello";
-		int num1=1;
-		int num2=2;
-		Solution14 s=new Solution14();
-		String result=s.solution(my_String, num1, num2);
-		System.out.println("ÀÎµ¦½º ¹Ù²Ù±â result: "+result);
-	}
+public class Sample014 { // ë¬¸ì ìœ„ì¹˜ ë°”ê¾¸ê¸°
+    public static void main(String[] args) {
+        String my_String = "hello";
+        int num1 = 1;
+        int num2 = 2;
+        Solution14 s = new Solution14();
+        String result = s.solution(my_String, num1, num2);
+        System.out.println("ë¬¸ì ìœ„ì¹˜ ë°”ê¾¸ê¸° result: " + result);
+    }
 }
+
 class Solution14 {
     public String solution(String my_string, int num1, int num2) {
         String answer = "";
-        String[] result=my_string.split("");//¹è¿­·Î º¯È¯ÇÑ´Ù.
-        for(int i=0; i<result.length; i++) {
-        	if(i==num1) {
-        		answer+=result[num2];
-        	} else if(i==num2){
-        		answer+=result[num1];
-        	} else {
-        		answer+=result[i];
-        	}
+        String[] result = my_string.split(""); // ë¬¸ìì—´ì„ ë°°ì—´ë¡œ ë³€í™˜í•¨.
+        for (int i = 0; i < result.length; i++) {
+            if (i == num1) {
+                answer += result[num2];
+            } else if (i == num2) {
+                answer += result[num1];
+            } else {
+                answer += result[i];
+            }
         }
         return answer;
     }

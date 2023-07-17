@@ -1,22 +1,23 @@
 package com.javabook.progmers02;
 
-public class Sample010 { //¾ÏÈ£ÇØµ¶
-	public static void main(String[] args) {
-		Solution10 s=new Solution10();
-		String cipher="dfjardstddetckdaccccdegk";
-		int code=4;
-		String solution=s.solution(cipher, code);
-		System.out.println("¾ÏÈ£ÇØµ¶ result: "+solution);
-	}
+public class Sample010 { // ë¬¸ìì—´ì¶”ì¶œ
+    public static void main(String[] args) {
+        Solution10 s = new Solution10();
+        String cipher = "dfjardstddetckdaccccdegk";
+        int code = 4;
+        String solution = s.solution(cipher, code);
+        System.out.println("ë¬¸ìì—´ì¶”ì¶œ result: " + solution);
+    }
 }
+
 class Solution10 {
     public String solution(String cipher, int code) {
         String answer = "";
-        String[] strSplit=cipher.split("");
-        for(int i=0; i<strSplit.length; i++) {
-        	if((i+1)%code==0) {
-        		answer+=strSplit[i];
-        	}
+        String[] strSplit = cipher.split("");
+        for (int i = 0; i < strSplit.length; i++) {
+            if ((i + 1) % code == 0) {
+                answer += strSplit[i];
+            }
         }
         return answer;
     }

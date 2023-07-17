@@ -1,52 +1,52 @@
 package com.javabook.progmers02;
 
-public class Sample019 {//°¡±î¿î¼ö
-	public static void main(String[] args) {
-		Solution19 s=new Solution19();
-		//int []array= {3,10,28};
-		//int n=20;
-		int []array= {10,11,12};
-		int n=13;
-		int result=s.solution(array, n);
-		System.out.println("°¡±î¿î¼ö: "+result);
-	}
+public class Sample019 { // ê°€ì¥ ê°€ê¹Œìš´ ê°’
+    public static void main(String[] args) {
+        Solution19 s = new Solution19();
+        //int []array = {3,10,28};
+        //int n = 20;
+        int []array = {10,11,12};
+        int n = 13;
+        int result = s.solution(array, n);
+        System.out.println("ê°€ì¥ ê°€ê¹Œìš´ ê°’: " + result);
+    }
 }
 class Solution19 {
     public int solution(int[] array, int n) {
-    	
         int answer = 0;
         
-        //¿À¸§Â÷¼øÁ¤·ÄÀ¸·Î  Á¤·ÄµÈ ¼ıÀÚ¸¦ ºñ±³ÇÑ´Ù.
-        for(int i=0;i<array.length-1;i++){
-            
-            for(int j=0; j<array.length-1-i;j++){
-                if(array[j]>array[j+1]){                   
+        // ë°°ì—´ì„ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤.
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
                     int tmp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = tmp;                  
-                }              
-            }          
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
         }
         
-        for(int i=0; i<array.length; i++) {
-        	if(array[i]>=n) {
-        		int num1=n-array[i-1];
-        		int num2=array[i]-n;
-        		
-        		if(num1>num2) {
-        			answer=array[i];
-        			return answer;
-        		} else if(num1<num2) {
-        			answer=array[i-1];
-        			return answer;
-        		}  else if(num1==num2) {
-        			answer=array[i-1];
-        			return answer;
-        		} 
-        	}
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= n) {
+                int num1 = n - array[i - 1];
+                int num2 = array[i] - n;
+                
+                // ë‘ ê°’ì˜ ì ˆëŒ€ê°’ì´ ê°™ì„ ë•Œì—ëŠ” ë” ì‘ì€ ê°’ì„ ì„ íƒí•œë‹¤.
+                if (num1 > num2) {
+                    answer = array[i];
+                    return answer;
+                } else if (num1 < num2) {
+                    answer = array[i - 1];
+                    return answer;
+                } else if (num1 == num2) {
+                    answer = array[i - 1];
+                    return answer;
+                }
+            }
         }
         
-        answer=array[array.length-1];
+        // ê°€ì¥ ê°€ê¹Œìš´ ê°’ì´ ì—†ëŠ” ê²½ìš°, ë°°ì—´ì˜ ë§ˆì§€ë§‰ ê°’ì´ ê°€ì¥ ê°€ê¹Œìš´ ê°’ì´ ëœë‹¤.
+        answer = array[array.length - 1];
         return answer;
     }
 }

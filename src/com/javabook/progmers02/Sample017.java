@@ -1,48 +1,50 @@
 package com.javabook.progmers02;
 
-public class Sample017 {
-	public static void main(String[] args) {//A·Î B ¸¸µé±â
-		Solution17 s=new Solution17();
-		String before="olleh";
-		String after="hello";
-		System.out.println("A·Î B ¸¸µé±â: "+s.solution(before,after));
-	}
+public class Sample017 { // Aì™€ B ë¬¸ìì—´
+    public static void main(String[] args) {
+        Solution17 s = new Solution17();
+        String before = "olleh";
+        String after = "hello";
+        System.out.println("Aì™€ B ë¬¸ìì—´: " + s.solution(before, after));
+    }
 }
+
 class Solution17 {
     public int solution(String before, String after) {
         int answer = 0;
-        
-        char[] b_One=before.toCharArray();
-        char[] a_One=after.toCharArray();
-        
-        //b_OneÁ¤·Ä
+
+        char[] b_One = before.toCharArray();
+        char[] a_One = after.toCharArray();
+
+        // b_One ì •ë ¬
         ArraySort(b_One);
-        //a_One Á¤·Ä
+        // a_One ì •ë ¬
         ArraySort(a_One);
-        
-        String beChange=new String(b_One);
-        String afChange=new String(a_One);
-        if(beChange.equals(afChange)){
-            answer=1;
+
+        String beChange = new String(b_One);
+        String afChange = new String(a_One);
+        if (beChange.equals(afChange)) {
+            answer = 1;
         } else {
-            answer=0;
+            answer = 0;
         }
-        
-        //answer=beChange.equals(afChange) ? 1 : 0; //ÀÚ¸ÅÇ°.. »ïÇ×¿¬»êÀÚµµ ÀÖ¾î¿ä~ ¤¾¤¾¤¾ ¤»
-        
+
+        // answer = beChange.equals(afChange) ? 1 : 0; // í•œì¤„ë¡œ.. ì¡°ê±´ì‹ìœ¼ë¡œ ê²°ê³¼ ë°˜í™˜
+
         return answer;
     }
-    public void ArraySort(char[] sort){
-        //¿À¸§Â÷¼ø Á¤·ÄÇÏ±â
-        for(int i=0;i<sort.length-1;i++){
-            
-            for(int j=0; j<sort.length-1-i;j++){
-                if(sort[j]>sort[j+1]){                   
+
+    public void ArraySort(char[] sort) {
+        // ë²„ë¸”ì •ë ¬ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬í•˜ê¸°
+        for (int i = 0; i < sort.length - 1; i++) {
+
+            for (int j = 0; j < sort.length - 1 - i; j++) {
+                if (sort[j] > sort[j + 1]) {
                     char tmp = sort[j];
-                    sort[j] = sort[j+1];
-                    sort[j+1] = tmp;                  
-                }              
-            }          
+                    sort[j] = sort[j + 1];
+                    sort[j + 1] = tmp;
+                }
+            }
         }
     }
 }
