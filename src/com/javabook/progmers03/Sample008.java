@@ -12,10 +12,14 @@ public class Sample008 {//프로그래머스 원하는 문자열 찾기
 
 class Solution008 {
     public int solution(String myString, String pat) {
-        int answer = 0;
-        if(myString.toLowerCase().contains(pat.toLowerCase())){
-            answer=1;
-        }
-        return answer;
+    	/*
+	        int answer = 0;
+	        if(myString.toLowerCase().contains(pat.toLowerCase())){
+	            answer=1;
+	        }
+	        return answer;
+        */
+    	return myString.toLowerCase().contains(pat.toLowerCase()) ? 1 : 0;
+
     }
 }
