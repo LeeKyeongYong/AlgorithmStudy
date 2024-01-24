@@ -1,10 +1,6 @@
 package com.algorithm2024.programers01;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class exam2040124 {//Main클래스
     public static void main(String[] args) {
