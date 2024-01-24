@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class exam2040124 {
+public class exam2040124 {//Main클래스
     public static void main(String[] args) {
-        // Example usage
+
         List<String> friends = Arrays.asList("A", "B", "C");
         List<String> gifts = Arrays.asList("A B", "B C", "C A");
         Solution01 s1 = new Solution01();
@@ -17,7 +17,7 @@ public class exam2040124 {
     }
 }
 
-class Solution01 {
+class Solution01 { //선물 교환 문제를 해결하는 메서드와 필요한 데이터 구조를 정의
 
     static Map<String, Integer> FM;
     static List<List<Integer>> graph;
@@ -29,7 +29,7 @@ class Solution01 {
         giftScore = new ArrayList<>();
     }
 
-    static void splitFunc(String str) {
+    static void splitFunc(String str) {//주어진 문자열에서 두 친구 간의 선물 교환 정보를 추출하고, 그에 따라 그래프와 선물 점수를 업데이트합니다.
         String[] ans = str.split(" ");
         graph.get(FM.get(ans[0])).set(FM.get(ans[1]), graph.get(FM.get(ans[0])).get(FM.get(ans[1])) + 1);
         graph.get(FM.get(ans[1])).set(FM.get(ans[0]), graph.get(FM.get(ans[1])).get(FM.get(ans[0])) - 1);
@@ -38,6 +38,7 @@ class Solution01 {
     }
 
     public int solution(List<String> friends, List<String> gifts) {
+        //주어진 친구 목록과 선물 정보를 기반으로 그래프와 선물 점수를 초기화하고, 각 친구의 선물을 계산하여 최종적으로 가장 많은 선물을 받은 친구를 찾아 반환합니다.
         int answer = 0;
         giftScore = new ArrayList<>(friends.size());
         for (int i = 0; i < friends.size(); i++) {
@@ -69,6 +70,6 @@ class Solution01 {
                 answer = nowGift;
             }
         }
-        return answer;
+        return answer;// 최종적으로 가장 많은 선물을 받은 친구의 수를 반환합니다.
     }
 }
