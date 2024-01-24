@@ -37,6 +37,15 @@ class Solution01 { //선물 교환 문제를 해결하는 메서드와 필요한
         graph.get(FM.get(ans[1])).set(FM.get(ans[0]), graph.get(FM.get(ans[1])).get(FM.get(ans[0])) - 1);
         giftScore.set(FM.get(ans[0]), giftScore.get(FM.get(ans[0])) + 1);
         giftScore.set(FM.get(ans[1]), giftScore.get(FM.get(ans[1])) - 1);
+
+        /*
+        String[] ans = str.split(" ");
+        graph.get(FM.get(ans[0])).set(FM.get(ans[1]), graph.get(FM.get(ans[0])).get(FM.get(ans[1])) + 1);
+        graph.get(FM.get(ans[1])).set(FM.get(ans[0]), graph.get(FM.get(ans[1])).get(FM.get(ans[0])) - 1);
+        giftScore.set(FM.get(ans[0]), giftScore.get(FM.get(ans[0])) + 1);
+        giftScore.set(FM.get(ans[1]), giftScore.get(FM.get(ans[1])) - 1);
+
+         */
     }
 
     public int solution(List<String> friends, List<String> gifts) {
@@ -46,10 +55,18 @@ class Solution01 { //선물 교환 문제를 해결하는 메서드와 필요한
         for (int i = 0; i < friends.size(); i++) {
             FM.put(friends.get(i), i);
         }
+
         graph = new ArrayList<>(friends.size());
         for (int i = 0; i < friends.size(); i++) {
             graph.add(new ArrayList<>(Collections.nCopies(friends.size(), 0)));
         }
+        /*
+         for (int i = 0; i < friends.size(); i++) {
+            graph.add(new ArrayList<>(Collections.nCopies(friends.size(), 0)));
+            for (int j = 0; j < friends.size(); j++) {
+                graph.get(i).set(j, 0);
+            }
+         */
 
         for (int i = 0; i < gifts.size(); i++) {
             splitFunc(gifts.get(i));
