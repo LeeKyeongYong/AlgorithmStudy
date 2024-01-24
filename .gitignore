@@ -1,6 +1,65 @@
 # Created by https://www.toptal.com/developers/gitignore/api/eclipse,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,intellij
+# User-specific configurations
+### Gradle ###
+build/
+gradle/
+gradlew
+gradlew.bat
+.gradle/
+gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+.idea/caches/
+.idea/libraries/
+.idea/shelf/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/assetWizardSettings.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/navEditor.xml
+.idea/*.xml
+*.class
+# Package Files #
+*.war
+*.ear
+# IDEA config files
+.idea/
+*.yml
+*.gradle
 ### Eclipse ###
 .metadata
 .classpath
@@ -15,7 +74,9 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+.class
+log/
+target/
 # External tool builders
 .externalToolBuilders/
 
@@ -184,3 +245,6 @@ fabric.properties
 # Azure Toolkit for IntelliJ plugin
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
+
+application.yml
+application-prod.yml

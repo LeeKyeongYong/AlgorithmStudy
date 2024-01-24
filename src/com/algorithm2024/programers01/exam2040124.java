@@ -45,7 +45,7 @@ class Solution01 {
         }
         graph = new ArrayList<>(friends.size());
         for (int i = 0; i < friends.size(); i++) {
-            graph.add(new ArrayList<>(Arrays.asList(new Integer[friends.size()])));
+            graph.add(new ArrayList<>(Collections.nCopies(friends.size(), 0)));
             for (int j = 0; j < friends.size(); j++) {
                 graph.get(i).set(j, 0);
             }
