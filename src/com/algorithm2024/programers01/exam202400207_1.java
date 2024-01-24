@@ -7,8 +7,7 @@ public class exam202400207_1 { //스트림버전
         String[] enroll={};
         String[] referral={};
         String[] seller={};
-
-        int[] amount={};
+                int[] amount={};
         int[] result=Solution.solution(enroll,referral,seller,amount);
         System.out.println(Arrays.toString(result));
 
