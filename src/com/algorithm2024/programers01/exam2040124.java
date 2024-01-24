@@ -27,6 +27,12 @@ class Solution01 { //선물 교환 문제를 해결하는 메서드와 필요한
 
     static void splitFunc(String str) {//주어진 문자열에서 두 친구 간의 선물 교환 정보를 추출하고, 그에 따라 그래프와 선물 점수를 업데이트합니다.
         String[] ans = str.split(" ");
+        if (graph.get(FM.get(ans[0])) == null) {
+            graph.set(FM.get(ans[0]), new ArrayList<>(Collections.nCopies(FM.size(), 0)));
+        }
+        if (graph.get(FM.get(ans[1])) == null) {
+            graph.set(FM.get(ans[1]), new ArrayList<>(Collections.nCopies(FM.size(), 0)));
+        }
         graph.get(FM.get(ans[0])).set(FM.get(ans[1]), graph.get(FM.get(ans[0])).get(FM.get(ans[1])) + 1);
         graph.get(FM.get(ans[1])).set(FM.get(ans[0]), graph.get(FM.get(ans[1])).get(FM.get(ans[0])) - 1);
         giftScore.set(FM.get(ans[0]), giftScore.get(FM.get(ans[0])) + 1);
@@ -43,10 +49,8 @@ class Solution01 { //선물 교환 문제를 해결하는 메서드와 필요한
         graph = new ArrayList<>(friends.size());
         for (int i = 0; i < friends.size(); i++) {
             graph.add(new ArrayList<>(Collections.nCopies(friends.size(), 0)));
-            for (int j = 0; j < friends.size(); j++) {
-                graph.get(i).set(j, 0);
-            }
         }
+
         for (int i = 0; i < gifts.size(); i++) {
             splitFunc(gifts.get(i));
         }
