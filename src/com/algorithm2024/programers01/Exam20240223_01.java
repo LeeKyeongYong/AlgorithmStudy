@@ -27,5 +27,21 @@ public class Solution004 {
 
         return dp[n];
     }
+    /*
 
+     public static int solution(int n, int[] money) {
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+
+        Arrays.stream(money).forEach(coin ->
+                IntStream.rangeClosed(coin, n)
+                        .forEach(i -> {
+                            dp[i] += dp[i - coin];
+                            dp[i] %= 1000000007;
+                        }));
+
+        return dp[n];
+    }
+
+     */
 }
