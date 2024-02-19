@@ -1,6 +1,5 @@
 package com.algorithm2024.programers01;
 
-import com.javabook.progmers0.Solution4;
 
 //프로그래머스 연습문제 거스름돈
 public class Exam20240223_01 { //동적 계획법 활용한것
@@ -13,7 +12,7 @@ public class Exam20240223_01 { //동적 계획법 활용한것
         System.out.println(result);
     }
 }
-public class Solution004 {
+class Solution004 {
     public static int solution(int n, int[] money) {
         int[] dp = new int[n + 1];
         dp[0] = 1;
