@@ -1,5 +1,8 @@
 package com.algorithm2024.programers01;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Exam20240227_launch {//카카오 시뮬레이션 프렌즈4 블록2
 
     public static int solution(int m, int n, String[] board) {
