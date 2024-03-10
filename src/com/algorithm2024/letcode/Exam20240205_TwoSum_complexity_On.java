@@ -25,7 +25,7 @@ public class Exam20240205_TwoSum_complexity_On {
     }
 
     public static void main(String[] args) {
-        TwoSum_complexity_On s = new TwoSum_complexity_On();
+        Exam20240205_TwoSum_complexity_On s = new Exam20240205_TwoSum_complexity_On();
 
         // 1, 2
         System.out.println(Arrays.toString(s.twoSum(new int[]{3, 2, 4}, 6)));
