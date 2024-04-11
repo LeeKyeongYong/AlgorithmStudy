@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Example20240410_q1559 {
+public class Example20240411_q11559 {
     static int n = 12;
     static int m = 6;
     static char[][] map;
