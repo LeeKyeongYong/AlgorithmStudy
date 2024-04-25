@@ -1,6 +1,8 @@
 package com.jababookbackjoon3;
 
 import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class Example20240419_q2468 {
     static int n;

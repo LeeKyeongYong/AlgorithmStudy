@@ -1,5 +1,7 @@
 package com.jababookbackjoon3;
 
+import java.util.Scanner;
+
 public class Example20240407_q19236 {
     static int[][] pos = {{-1, 0}, {-1, -1,}, {0, -1}, {1, -1}, {1, 0}, {1, 1}, {0, 1}, {-1, 1}};
     static int[][] map;
