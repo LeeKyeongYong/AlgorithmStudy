@@ -17,4 +17,3 @@ public class Example20240501_q2000 {
         System.out.println(reversePrefix("abcdefd", 'd'));
     }
 }
-}
