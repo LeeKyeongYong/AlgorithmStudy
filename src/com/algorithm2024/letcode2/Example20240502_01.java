@@ -1,40 +1,37 @@
 package com.algorithm2024.letcode2;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Example20240502_01 {
-    public static int findMaxK(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
 
-        Arrays.sort(nums);
-        int answer = Integer.MIN_VALUE;
+    /*
+     * Complete the 'fizzBuzz' function below.
+     *
+     * The function accepts INTEGER n as parameter.
+     */
 
-        for (int i : nums) {
-            int key = Math.abs(i);
-
-            if (!map.containsKey(key)) {
-                map.put(key, i);
+    public static void fizzBuzz(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0 && i % 5 != 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0 && i % 3 != 0) {
+                System.out.println("Buzz");
             } else {
-                Integer findValue = map.get(key);
-                if (findValue == i) {
-                    continue;
-                }
-
-                map.remove(key);
-                answer = Math.max(answer, key);
+                System.out.println(i);
             }
         }
 
-        if (answer == Integer.MIN_VALUE) {
-            return -1;
-        }
-
-        return answer;
     }
 
-    public static void main(String[] args) {
-        // -1
-        System.out.println(findMaxK(new int[]{-9, -43, 24, -23, -16, -30, -38, -30}));
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        Example20240502_01.fizzBuzz(n);
     }
 }
