@@ -41,5 +41,5 @@ public class Example20240526_q1863 {
         // 6
         System.out.println(solution.subsetXORSum(new int[]{1, 2}));
     }
-    }
+
 }

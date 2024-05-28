@@ -1,6 +1,6 @@
 package com.algorithm2024.letcode2;
 
-import java.util.Stack;
+import java.util.*;
 
 public class Example20240503_q22 {
     static int m;
