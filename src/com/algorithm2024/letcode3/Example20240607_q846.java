@@ -1,5 +1,8 @@
 package com.algorithm2024.letcode3;
 
+
+import java.util.*;
+
 public class Example20240607_q846 {
     public static boolean isNStraightHand(int[] hand, int groupSize) {
         Map<Integer, Integer> map = new HashMap<>();
