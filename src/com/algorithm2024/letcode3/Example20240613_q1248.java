@@ -1,4 +1,4 @@
-package com.algorithm2024.letcode2;
+package com.algorithm2024.letcode3;
 
 import java.util.HashMap;
 import java.util.Map;
