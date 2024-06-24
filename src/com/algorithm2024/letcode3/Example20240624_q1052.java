@@ -1,6 +1,7 @@
 package com.algorithm2024.letcode3;
 
 public class Example20240624_q1052 {
+
     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
         int n = customers.length;
 
