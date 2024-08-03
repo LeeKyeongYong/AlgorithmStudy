@@ -91,5 +91,3 @@ public class Example20240802_q14499 {
         System.out.println(dice[3]);
     }
 }
-
-}
