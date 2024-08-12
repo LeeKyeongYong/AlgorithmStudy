@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Example20240811_q250 {
+public class Example20240811_q350 {
 
     public int[] intersect(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList<>();
