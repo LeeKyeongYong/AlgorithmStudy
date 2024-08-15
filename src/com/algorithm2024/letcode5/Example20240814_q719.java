@@ -2,7 +2,7 @@ package com.algorithm2024.letcode5;
 
 import java.util.Arrays;
 
-public class Example20240814_q709 {
+public class Example20240814_q719 {
 
     public int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
@@ -41,7 +41,7 @@ public class Example20240814_q709 {
     }
 
     public static void main(String[] args) {
-        Example20240814_q709 sol = new Example20240814_q709();
+        Example20240814_q719 sol = new Example20240814_q719();
         System.out.println(sol.smallestDistancePair(new int[]{1, 6, 1}, 3));
     }
 
