@@ -38,5 +38,3 @@ public class Example20240820_q12845 {
         System.out.println(sum);
     }
 }
-
-}
