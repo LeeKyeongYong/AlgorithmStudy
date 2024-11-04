@@ -22,5 +22,3 @@ public class Example20241024_q2 {
         System.out.println(dp[num] * dp[num]);
     }
 }
-
-}

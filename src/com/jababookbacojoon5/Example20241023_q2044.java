@@ -42,5 +42,3 @@ public class Example20241023_q2044 {
         System.out.println(sol.countMaxOrSubsets(new int[]{3, 1}));
     }
 }
-
-}
