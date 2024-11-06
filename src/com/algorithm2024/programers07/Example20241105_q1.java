@@ -24,7 +24,7 @@ public class Example20241105_q1 { //[PCCP 기출문제] 1번 / 붕대 감기
                 curHealth -= attackInfo.get(time);
                 consecutiveSafeTurns = 0;
             } else {
-                
+
                 curHealth += bandage[1];
                 consecutiveSafeTurns++;
 
