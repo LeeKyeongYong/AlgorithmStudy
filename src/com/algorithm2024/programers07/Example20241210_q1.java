@@ -88,6 +88,11 @@ class VisitManager {
         return visit.containsKey(next) && !visit.get(next).contains(current);
     }
 
+    // contains 메소드를 추가하여 특정 Pair가 visit에 존재하는지 확인
+    public boolean contains(Pair pair) {
+        return visit.containsKey(pair);
+    }
+
     public void addVisit(Pair current, Pair next) {
         visit.putIfAbsent(current, new ArrayList<>());
         visit.putIfAbsent(next, new ArrayList<>());
@@ -99,6 +104,7 @@ class VisitManager {
         visit.put(current, list);
     }
 }
+
 
 public class Example20241210_q1 {
     public int solution(int[] arrows) {
